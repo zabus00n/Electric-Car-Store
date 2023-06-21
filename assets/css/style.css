@@ -14,7 +14,8 @@ nav {
     justify-content: space-between;
     padding: 1rem;
     grid-area: nav;
-    background-color: blue;
+    background-color: #00579c;
+    color: white;
 }
 
 .filters {
@@ -24,24 +25,24 @@ nav {
     align-items: center;
     justify-content: center;
     padding: 1rem;
-    background-color: red;
+    background-color: #e2e2e2;
 }
 
 .products {
     grid-area: products;
-    background-color: pink;
+    background-color: white;
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    padding: 1rem;
+    padding: 1.5rem 1rem; 
 }
 
 .grid-container {
+    font-family: "Open Sans", sans-serif;
     height: 100vh;
     display: grid;
-    background-color: green;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 12% 68% 1fr;
+    grid-template-rows: 9% 12% 68% 11%;
     grid-template-areas:
         "nav"
         "filters"
@@ -53,7 +54,7 @@ nav {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 1rem;
+    gap: 0.75rem;
 }
 
 .filter-container {
@@ -61,39 +62,42 @@ nav {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    gap: 0.5rem;
+    gap: 0.25rem;
 }
 
 .select {
-    border-style: solid;
+    border: solid thin #D8DCE1;
     border-radius: 4px;
-    border-width: thin;
     width: 100%;
     height: 2.5rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem 0.5rem;
+    padding: 1rem 0.75rem;
+    background-color: white;
 }
 
 .product-gallery {
     width: 100%;
-    height: 92%;
-    background-color: aqua;
+    height: auto;
+    background-color: white;
     overflow-y: scroll;
     display: grid;
-    row-gap: 2rem;
-}   
+    gap: 1.5rem;
+}
 
 .product-card {
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
+    justify-content: center;
     align-items: center;
     height: 100%;
     width: 100%;
-    background-color: blueviolet;
     padding: 1rem 0;
+    background-color: white;
+    border: thin solid #f0f0f0;
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px 0.5px rgba(0, 0, 0, 0.15);
 }
 
 .product-image {
@@ -107,26 +111,29 @@ img {
 }
 
 .product-name {
-    padding: 1.5rem;
+    padding: 1rem 0rem;
 }
 
 .product-CTA-button {
     border: none;
     border-radius: 4px;
-    background-color: #25527b;
+    background-color:#00579C;
     color: white;
-    width: 5rem;
-    padding: 0.75rem 0.5rem;
+    width: fit-content;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    
 }
 
 .product-pagination {
     width: 100%;
-    height: 8%;
-    background-color: brown;
+    height: auto;
+    background-color: white;
+    color: #E6E8EC;
     display: flex;
     justify-content: center;
     align-items: center;
-} 
+}
 
 .product-pagination-button {
     display: flex;
@@ -134,15 +141,50 @@ img {
     justify-content: center;
     height: 2.5rem;
     width: 2.5rem;
-    border-style: solid;
+    border-style: solid none solid solid;
     border-width: thin;
 }
 
 .product-pagination-button:first-of-type {
     border-radius: 4px 0 0 4px;
-  }
-  
-  .product-pagination-button:last-of-type {
-    border-radius: 0 4px 4px 0;
-  }
+}
 
+.product-pagination-button:last-of-type {
+    border-radius: 0 4px 4px 0;
+    border-right: solid;
+    border-width: thin;
+}
+
+.button-label {
+    color: #1C71FD;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background-color: #012f6b;
+    color: white;
+    padding: 1rem;
+}
+
+.social-list {
+    display: flex;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+    padding-top: 0.5rem;
+}
+
+.fa-instagram {
+    padding-top: 10px;
+    font-size: 1.35rem;
+}
+
+footer p {
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
